@@ -73,16 +73,25 @@ public class MazeInfo : MonoBehaviour
         
         // Initialize EdgeLengths with random edge length
         // and EdgeToAisle with aisles in the scene
-        int index = 1;
-        for (int i = 0; i < 35; i++)
+        for (int i = 0; i < ROOM_SIZE; i++)
         {
             foreach (int toIndex in Graph[i])
             {
                 if (toIndex > i)
                 {
                     _edgeLengths[Tuple.Create(i, toIndex)] = Random.Range(0f, 20f);
-                    EdgeToAisle[Tuple.Create(i, toIndex)] = GameObject.Find("Aisle" + index);
-                    index++;
+                    
+                    int index = -1;
+                    if (toIndex - i == 1)
+                    {
+                        index = (i / 6) * 5 + i % 6 + 1;
+                    }
+                    else
+                    {
+                        index = (i % 6) * 5 + i / 6 + 1 + 30;
+                    }
+                    EdgeToAisle[Tuple.Create(i, toIndex)] = GameObject.Find("Aisle_" + index);
+                    EdgeToAisle[Tuple.Create(i, toIndex)].SetActive(false);
                 }
             }
         }
