@@ -9,6 +9,7 @@ public class GameController : MonoBehaviour
     public static GameController Instance { get { return _instance; } }
     
     // Member variables
+    public int CurrScore { get; set; }
     public int BestScore { get; set; }
     
     
@@ -27,5 +28,23 @@ public class GameController : MonoBehaviour
         _instance = this;
         BestScore = 0;
         DontDestroyOnLoad(gameObject);
+    }
+    
+    // Game starts
+    public void StartGame()
+    {
+        CurrScore = 0;
+        Debug.Log("StartGame");
+    }
+    
+    // Game ends
+    public void EndGame()
+    {
+        // Update best score
+        if (CurrScore > BestScore)
+        {
+            BestScore = CurrScore;
+        }
+        Debug.Log("EndGame");
     }
 }
