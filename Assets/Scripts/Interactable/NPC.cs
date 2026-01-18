@@ -15,7 +15,7 @@ public class NPC : Interactable
     {
         "Go get me some blue magic potions!",
         "I will share map marking your and potion's posions with you everytime a new potion appears, BUT only 10s every time.",
-        "But I have to rest for 30s to share the map before you get to the potion.",
+        "But I have to rest for 20s to share the map before you get to the potion.",
         "Good Luck!"
     };
     [SerializeField] private TMP_Text _message;
