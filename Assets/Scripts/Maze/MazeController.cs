@@ -28,6 +28,10 @@ public class MazeController : MonoBehaviour
     // Start
     private void Start()
     {
-        
+        // Activate included aisles
+        foreach (Tuple<int, int> edge in MazeInfo.Instance.IncludedEdges)
+        {
+            MazeInfo.Instance.EdgeToAisle[edge].SetActive(true);
+        }
     }
 }
