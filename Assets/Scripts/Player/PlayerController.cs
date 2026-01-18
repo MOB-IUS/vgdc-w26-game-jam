@@ -99,7 +99,6 @@ public class PlayerController : MonoBehaviour
     {
         if (_interactable != null)
         {
-            Debug.Log("Player interacts!");
             _interactable.OnInteract();
         }
     }
