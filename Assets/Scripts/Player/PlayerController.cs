@@ -66,6 +66,12 @@ public class PlayerController : MonoBehaviour
             _promptMessage.SetActive(false);
         }
     }
+    
+    // Return _xOrientation
+    public float GetXOrientation()
+    {
+        return _xOrientation;
+    }
 
     // Update player velocity
     void OnMove(InputValue value)

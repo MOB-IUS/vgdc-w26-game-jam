@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,6 +12,10 @@ public class GameController : MonoBehaviour
     // Member variables
     public int CurrScore { get; set; }
     public int BestScore { get; set; }
+    public float CurrTime { get; set; }
+    public float MaxTime { get; set; }
+
+    private bool _isInGame = false;
     
     
     
@@ -27,13 +32,30 @@ public class GameController : MonoBehaviour
         // Initialization
         _instance = this;
         BestScore = 0;
+        CurrTime = 0f;
+        MaxTime = 210f;
         DontDestroyOnLoad(gameObject);
     }
     
+    // Update
+    private void Update()
+    {
+        if (_isInGame)
+        {
+            CurrTime += Time.deltaTime;
+            if (CurrTime >= MaxTime)
+            {
+                this.EndGame();
+            }
+        }
+    }
+
     // Game starts
     public void StartGame()
     {
         CurrScore = 0;
+        CurrTime = 0f;
+        _isInGame = true;
         Debug.Log("StartGame");
     }
     
