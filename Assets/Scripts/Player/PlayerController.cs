@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody _rb;
     [SerializeField]private Transform _mainCameraTransform;
     
-    private float _speed = 7.5f;                // Player Movement
+    private float _speed = 13.5f;                // Player Movement
     private float _sensitivity = 10f;
     private float _xOrientation = 0f;
     private float _yOrientation = 0f;
@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
     private float _interactDistance = 3.5f;     // Player Interact
     private Interactable _interactable;
     [SerializeField] private GameObject _promptMessage;
+    [SerializeField] private TMP_Text _scoreNum;
 
     
     
@@ -71,6 +72,12 @@ public class PlayerController : MonoBehaviour
     public float GetXOrientation()
     {
         return _xOrientation;
+    }
+    
+    // Update score text
+    public void UpdateScore(int score)
+    {
+        _scoreNum.text = score.ToString();
     }
 
     // Update player velocity

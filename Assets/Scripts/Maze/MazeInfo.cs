@@ -143,5 +143,16 @@ public class MazeInfo : MonoBehaviour
                 }
             }
         }
+        
+        // Randomly add 4 more edges into the map
+        for (int i = 0; i < 4; i++)
+        {
+            Tuple<int, int> nextEdge = _sortedEdges[(int)(Random.Range(0, EDGE_SIZE))];
+            while (IncludedEdges.Contains(nextEdge))
+            {
+                nextEdge = _sortedEdges[(int)(Random.Range(0, EDGE_SIZE))];
+            }
+            IncludedEdges.Add(nextEdge);
+        }
     }
 }
