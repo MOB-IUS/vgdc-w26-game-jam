@@ -1,17 +1,32 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class MazeController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    // Singleton
+    private static MazeController _instance;
+    public static MazeController Instance { get { return _instance; } }
+    
+    
+    
+    // Awake
+    private void Awake()
     {
+        // Singleton
+        if (_instance != null && _instance != this)
+        {
+            Destroy(this.gameObject);
+            return;
+        }
         
+        // Initialization
+        _instance = this;
     }
 
-    // Update is called once per frame
-    void Update()
+    // Start
+    private void Start()
     {
         
     }

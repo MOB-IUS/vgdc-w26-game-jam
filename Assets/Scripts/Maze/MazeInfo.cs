@@ -14,8 +14,8 @@ public class MazeInfo : MonoBehaviour
     public static MazeInfo Instance { get { return _instance; } }
     
     // Const variables
-    private const int ROOM_SIZE = 36;
-    private const int EDGE_SIZE = 60;
+    public const int ROOM_SIZE = 36;
+    public const int EDGE_SIZE = 60;
     
     // Member variables
     public List<List<int>> Graph { get; set; }
