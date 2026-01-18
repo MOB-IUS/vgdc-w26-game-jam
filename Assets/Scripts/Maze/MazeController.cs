@@ -29,9 +29,17 @@ public class MazeController : MonoBehaviour
     private void Start()
     {
         // Activate included aisles
+        // and update dungeon rooms' mid-walls accordingly
         foreach (Tuple<int, int> edge in MazeInfo.Instance.IncludedEdges)
         {
+            // Activate aisle
             MazeInfo.Instance.EdgeToAisle[edge].SetActive(true);
+            
+            // Change room mid-wall
+            int roomFrom = edge.Item1;
+            int roomTo = edge.Item2;
+            GameObject.Find("Room_" + (roomFrom + 1)).GetComponent<MazeRoom>().ChangeWall(roomFrom, roomTo);
+            GameObject.Find("Room_" + (roomTo + 1)).GetComponent<MazeRoom>().ChangeWall(roomTo, roomFrom);
         }
     }
 }

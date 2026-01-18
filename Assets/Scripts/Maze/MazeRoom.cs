@@ -11,29 +11,29 @@ public class MazeRoom : MonoBehaviour
     
     // Change MidWall to ArcWall
     // direction must be one of "North", "East", "South", "West"
-    public void ChangeWall(string direction)
+    public void ChangeWall(int thisRoom, int targetRoom)
     {
         // Determine index
-        int index;
-        if (direction == "North")
+        int direction = targetRoom - thisRoom;
+        int index = -1;
+        if (direction == -6)
         {
             index = 0;
         }
-        else if (direction == "East")
+        else if (direction == 1)
         {
             index = 1;
         }
-        else if (direction == "South")
+        else if (direction == 6)
         {
             index = 2;
         }
-        else if (direction == "West")
+        else if (direction == -1)
         {
             index = 3;
         }
         else
         {
-            index = -1;
             Debug.LogError("Input direction invalid");
         }
         
