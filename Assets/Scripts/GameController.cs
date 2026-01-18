@@ -4,15 +4,28 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    // Singleton
+    private static GameController _instance;
+    public static GameController Instance { get { return _instance; } }
+    
+    // Member variables
+    public int BestScore { get; set; }
+    
+    
+    
+    // Awake
+    private void Awake()
     {
+        // Singleton
+        if (_instance != null && _instance != this)
+        {
+            Destroy(this.gameObject);
+            return;
+        }
         
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        // Initialization
+        _instance = this;
+        BestScore = 0;
+        DontDestroyOnLoad(gameObject);
     }
 }
