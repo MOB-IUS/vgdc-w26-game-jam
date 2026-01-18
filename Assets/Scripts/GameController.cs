@@ -41,11 +41,11 @@ public class GameController : MonoBehaviour
         _instance = this;
         BestScore = 0;
         TimeLeft = 0f;
-        MaxTime = 210f;
+        MaxTime = 180f;
         MapTimeLeft = 0f;
         MapMaxTime = 10f;
         PotionTimeLeft = 0f;
-        MaxPotionTime = 30f;
+        MaxPotionTime = 20f;
         DontDestroyOnLoad(gameObject);
     }
     

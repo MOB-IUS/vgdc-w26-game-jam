@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody _rb;
     [SerializeField]private Transform _mainCameraTransform;
     
-    private float _speed = 13.5f;                // Player Movement
+    private float _speed = 18.5f;                // Player Movement
     private float _sensitivity = 10f;
     private float _xOrientation = 0f;
     private float _yOrientation = 0f;
