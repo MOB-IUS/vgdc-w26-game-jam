@@ -31,8 +31,8 @@ Transform:
   m_Children:
   - {fileID: 797518404487682361}
   - {fileID: 7659111849983230263}
-  - {fileID: 2030218566993018357}
   - {fileID: 148530794020039712}
+  - {fileID: 2030218566993018357}
   - {fileID: 1704639970835669245}
   m_Father: {fileID: 4253728577850787960}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -254,7 +254,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2956356895895314395
 Transform:
   m_ObjectHideFlags: 0
@@ -5559,7 +5559,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4476307922608705379
 Transform:
   m_ObjectHideFlags: 0
@@ -5666,7 +5666,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7177428732818902650
 Transform:
   m_ObjectHideFlags: 0
@@ -10824,6 +10824,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4253728577850787960}
+  - component: {fileID: 7722994855180394185}
   m_Layer: 0
   m_Name: DungeonRoom
   m_TagString: Untagged
@@ -10850,6 +10851,28 @@ Transform:
   - {fileID: 2723624072393950927}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7722994855180394185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4083645990388073314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4803ccc8aa0d7541b08795f468e9a6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MidWalls:
+  - {fileID: 8356744829423529219}
+  - {fileID: 6663696064526700430}
+  - {fileID: 8875811343943640406}
+  - {fileID: 862461721045687261}
+  ArcWalls:
+  - {fileID: 2323958032405235328}
+  - {fileID: 4487960118092429867}
+  - {fileID: 6475622753984615858}
+  - {fileID: 2970876005573020817}
 --- !u!1 &4182663276993670009
 GameObject:
   m_ObjectHideFlags: 0
@@ -11115,7 +11138,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5240043284381301424
 Transform:
   m_ObjectHideFlags: 0
@@ -12036,7 +12059,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3340632820866158738
 Transform:
   m_ObjectHideFlags: 0
@@ -12215,7 +12238,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7817898872661683706
 Transform:
   m_ObjectHideFlags: 0
@@ -17463,7 +17486,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7685415822827343882
 Transform:
   m_ObjectHideFlags: 0
@@ -22631,7 +22654,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5318335249934790460
 Transform:
   m_ObjectHideFlags: 0
